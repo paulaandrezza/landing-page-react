@@ -16,7 +16,7 @@ export const PriceInfo = styled.h1`
 export const PriceInfoSpan = styled.span`
   font-size: 16px;
   line-height: 24px;
-  color: #fff;
+  color: '#014732';
   font-weight: 400;
 
   @media screen and (max-width: 480px) {
