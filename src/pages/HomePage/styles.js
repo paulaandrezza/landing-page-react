@@ -10,20 +10,41 @@ export const SectionContainer = styled.div`
   }
 `
 
+
 export const SectionWrapper = styled.div`
-  display: grid;
   height: 100%;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding 0 24px;
+  display: flex;
   justify-content: center;
+`
+
+export const InfoRow = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: ${({ rowReverse }) => (rowReverse ? 'column-reverse' : 'column')};
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: ${({ rowReverse }) => (rowReverse ? 'row-reverse' : 'row')};
+    gap: 48px;
+  }
+`
+
+export const Column = styled.div`
+  margin-bottom: 15px;
+  padding: 0 15px;
+  flex: 1;
+  width: 100%;
 `
 
 export const TextWrapper = styled.div`
   max-width: 640px;
   padding-top: 0;
   padding-bottom: 60px;
+  margin-bottom: 16px;
   text-align: ${({ textAlign }) => (textAlign === 'center' ? textAlign : 'left')};
 `
 
@@ -50,13 +71,12 @@ export const Heading = styled.h1`
 `
 
 export const Text = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   color: ${({ dark }) => (dark ? '#fff' : '#010606')};
-  margin-bottom: 16px;
 
   @media screen and (max-width: 480px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `
 

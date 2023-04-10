@@ -2,10 +2,12 @@ import React from "react";
 
 import { Header } from "../../components/Header";
 import { InfoSection } from "../../components/InfoSection";
-
-import { heroObj, aboutObj, planObj } from "./Data";
 import { PlanSection } from "../../components/PlanSection";
+import { FaqSection } from "../../components/FaqSection";
+import { FooterSection } from '../../components/FooterSection';
 import { WhatsappWidget } from "../../components/WhatsappWidget";
+
+import { heroObj, aboutObj, planObj, faqObj } from "./Data";
 
 export const Home = () => {
   return (
@@ -14,6 +16,8 @@ export const Home = () => {
       <InfoSection {...heroObj}/>
       <InfoSection {...aboutObj}/>
       <PlanSection {...planObj}/>
+      <FaqSection {...faqObj}/>
+      <FooterSection />
       <WhatsappWidget />
     </>
   )

@@ -1,16 +1,16 @@
 import React from "react";
 
 import { Button } from '../../styles/global'
-import { SectionContainer, SectionWrapper, TextWrapper, TopLine, Heading, Text, BtnWrap } from '../../pages/HomePage/styles'
-import { InfoRow, Column1, Column2, ImgWrap, Img } from './styles'
+import { SectionContainer, SectionWrapper, InfoRow, Column, TextWrapper, TopLine, Heading, Text, BtnWrap } from '../../pages/HomePage/styles'
+import { ImgWrap, Img } from './styles'
 
-export const InfoSection = ({ colorBg, dark, id, imgStart, topLine, headLine, description, button, buttonLabel, img, alt }) => {
+export const InfoSection = ({ colorBg, dark, id, rowReverse, topLine, headLine, description, button, buttonLabel, img, alt }) => {
   return (
     <>
       <SectionContainer colorBg={colorBg} id={id}>
         <SectionWrapper>
-          <InfoRow imgStart={imgStart}>
-            <Column1>
+          <InfoRow rowReverse={rowReverse}>
+            <Column>
               <TextWrapper>
                 <TopLine dark={dark}>{topLine}</TopLine>
                 <Heading dark={dark}>{headLine}</Heading>
@@ -21,12 +21,12 @@ export const InfoSection = ({ colorBg, dark, id, imgStart, topLine, headLine, de
                   </BtnWrap>
                 )}
               </TextWrapper>
-            </Column1>
-            <Column2>
+            </Column>
+            <Column>
               <ImgWrap>
                 <Img src={img} alt={alt}></Img>
               </ImgWrap>
-            </Column2>
+            </Column>
           </InfoRow>
         </SectionWrapper>
       </SectionContainer>
