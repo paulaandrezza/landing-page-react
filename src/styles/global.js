@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: 'Montserrat', sans-serif;
   }
@@ -50,9 +54,9 @@ export const Column = styled.div`
 `
 
 export const Button = styled.button`
-  background: ${({ primary }) => (primary ? '#00875f' : 'transparent')};
+  background: ${({ primary }) => (primary ? '#d4af37' : 'transparent')};
   border-radius: 5px;
-  border: 1px solid ${({ primary }) => (primary ? 'transparent' : '#00875f')};
+  border: 1.5px solid ${({ primary }) => (primary ? 'transparent' : '#d4af37')};
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
@@ -66,7 +70,7 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background: ${({ primary }) => (primary ? '#015F43' : '#00875f')};
+    background: ${({ primary }) => (primary ? '#e1ad21' : '#d4af37')};
 }
 `
 
@@ -74,6 +78,7 @@ export const LogoAncora = styled.a`
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
 `
 
 export const LogoImg = styled.img`

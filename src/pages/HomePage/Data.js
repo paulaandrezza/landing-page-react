@@ -1,5 +1,5 @@
 import img1 from '../../assets/undraw_online_payments_re_y8f2.svg'
-import img2 from '../../assets/undraw_savings_re_eq4w.svg'
+import img2 from '../../assets/undraw_transfer_money_re_6o1h.svg'
 
 export const heroObj = {
   id: 'hero',
@@ -17,7 +17,7 @@ export const heroObj = {
 
 export const aboutObj = {
   id: 'about',
-  colorBg: '#786858',
+  colorBg: '#f2f2c4',
   dark: false,
   topLine: 'title of about',
   headLine: "Sample headline goes here",
@@ -72,3 +72,34 @@ export const faqObj = {
   ]
 }
 
+export const footerObj = {
+  id: 'about',
+  colorBg: false,
+  dark: true,
+  textAlign: 'center',
+  topLine: 'title of footer',
+  headLine: "Sample headline goes here",
+  description: 'Here we will place a detailed description of the service we are providing',
+  button: true,
+  buttonLabel: 'Garantir minha vaga'
+}
+
+export const numbersObj = {
+  id: 'about',
+  colorBg: false,
+  dark: true,
+  numbers: [
+    {
+      value: '+900 aulas',
+      content: 'Para você assistir quando quiser',
+    },
+    {
+      value: '+200 horas',
+      content: 'De conteúdo técnico e teórico para você se especializar',
+    },
+    {
+      value: '5 módulos',
+      content: 'Completos com tudo o que você precisa saber',
+    }
+  ]
+}

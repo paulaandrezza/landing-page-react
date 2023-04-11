@@ -8,20 +8,20 @@ export const PlanSection = ({ colorBg, id, dark, textAlign, topLine, headLine, d
   return (
     <>
       <SectionContainer colorBg={colorBg} id={id}>
-      <SectionWrapper>
-        <TextWrapper textAlign={textAlign}>
-          <TopLine dark={dark}>{topLine}</TopLine>
-          <Heading dark={dark}>{headLine}</Heading>
-          <Text dark={dark} style={{marginBottom: '50px'}}>{description}</Text>
+        <SectionWrapper>
+          <TextWrapper textAlign={textAlign}>
+            <TopLine dark={dark}>{topLine}</TopLine>
+            <Heading dark={dark}>{headLine}</Heading>
+            <Text dark={dark} style={{marginBottom: '50px'}}>{description}</Text>
 
-          <Text dark={dark} style={{marginBottom: 0}}>De R$997 por 12x</Text>
-          <PriceInfo>59<PriceInfoSpan>,90/mês</PriceInfoSpan></PriceInfo>
-          <Text dark={dark}>OU R$ 497 À VISTA</Text>
-          <BtnWrap>
-            <Button primary>{buttonLabel}</Button>
-          </BtnWrap>
-        </TextWrapper>
-      </SectionWrapper>
+            <Text dark={dark} style={{marginBottom: 0}}>De R$997 por 12x</Text>
+            <PriceInfo>59<PriceInfoSpan>,90/mês</PriceInfoSpan></PriceInfo>
+            <Text dark={dark}>OU R$ 497 À VISTA</Text>
+            <BtnWrap>
+              <Button primary>{buttonLabel}</Button>
+            </BtnWrap>
+          </TextWrapper>
+        </SectionWrapper>
       </SectionContainer>
     </>
   )

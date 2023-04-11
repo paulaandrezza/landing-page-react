@@ -16,7 +16,7 @@ export const DropdownTitle = styled.button`
   border: none;
   cursor: pointer;
 
-  border-radius: ${({ dropdowToggle }) => (dropdowToggle ? '4px 4px 0 0' : '4px')};
+  border-radius: ${props => props.isOpen ? '4px 4px 0 0' : '4px'};
 
   display: flex;
   align-items: center;
@@ -27,13 +27,11 @@ export const DropdownTitle = styled.button`
 export const DropdownTextTitle = styled.p`
   font-size: 18px;
   line-height: 24px;
-  color: #fff;
+  color: ${props => props.isOpen ? '#A78B3C' : '#FFF'};
 
   @media screen and (max-width: 480px) {
     font-size: 16px;
   }
-
-  font-weight: ${({ dropdowToggle }) => (dropdowToggle ? '600' : '500')}
 `
 
 export const DropdownIcon = styled.div`
@@ -45,7 +43,7 @@ export const DropdownIcon = styled.div`
   align-items: center;
   justify-content: center;
 
-  transform: rotate(${({ dropdowToggle }) => (dropdowToggle ? '180deg' : '0deg')});
+  transform: rotate(${props => props.isOpen ? '180deg' : '0deg'});
   transition: .3s;
 `
 
@@ -53,18 +51,21 @@ export const DropdownContent = styled.div`
   background: #181818;
   border-radius: 0 0 4px 4px;
   width: 100%;
-  height: 100%;
-  padding: 16px 24px;
 
-  
-`
+  overflow: hidden;
+  height: ${props => props.isOpen ? '100%' : '0'};
+  visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+
+  // TODO: não está funcionando, precisa arrumar
+`;
+
 
 export const DropdownTextContent = styled.div`
   font-size: 16px;
+  padding: 16px 24px;
   color: #c5c5c5;
 
   @media screen and (max-width: 480px) {
     font-size: 14px;
   }
-
 `
