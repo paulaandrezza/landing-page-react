@@ -10,12 +10,11 @@ export const DropdownToggle = ({ title, content }) => {
   const dropdowToggle = () => {
     setIsOpen(!isOpen)
   }
-  
-  console.log(isOpen)
 
   return (
     <>
       <DropdownContainer>
+        
         <DropdownTitle onClick={dropdowToggle} isOpen={isOpen}>
           <DropdownTextTitle isOpen={isOpen}>{title}</DropdownTextTitle>
           <DropdownIcon isOpen={isOpen}><SlArrowDown /></DropdownIcon>
